@@ -4,6 +4,7 @@ from .rgb_image import RGBImageField
 from .bytes import BytesField
 from .ndarray import NDArrayField
 from .json import JSONField
+from .string import StringField
 
 __all__ = ['Field', 'BytesField', 'IntField', 'FloatField', 'RGBImageField',
-           'NDArrayField', 'JSONField']
+           'NDArrayField', 'JSONField', 'StringField']
