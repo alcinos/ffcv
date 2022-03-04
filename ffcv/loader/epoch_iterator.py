@@ -135,7 +135,7 @@ class EpochIterator(Thread):
                 if first_stage:
                     first_stage = False
                     self.memory_context.end_batch(b_ix)
-        return tuple(x[:len(batch_indices)] for x in args)
+        return tuple(x[:len(batch_indices)] for x in args) + (list(batch_indices), )
 
     def __next__(self):
         result = self.output_queue.get()
